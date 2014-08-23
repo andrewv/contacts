@@ -10,6 +10,20 @@ import UIKit
 
 class Contacts: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    struct contactInfo {
+        var name: String
+        var phoneNumber: String
+    }
+    
+    var listOfContacts: [contactInfo] = []
+    
+    //Basic contacts
+    
+    
+    var firstContact = contactInfo(name: "Andrew Varvel", phoneNumber: "0400 123 456")
+    var secondContact = contactInfo(name: "John Smith", phoneNumber: "0411 123 456")
+
+    
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return listOfContacts.count
     }
@@ -24,22 +38,32 @@ class Contacts: UITableViewController, UITableViewDataSource, UITableViewDelegat
         return cell
     }
     
-    struct contactInfo {
-        var name: String
-        var phoneNumber: String
-    }
-    
-    var listOfContacts: [contactInfo] = []
-    
-    var firstContact = contactInfo(name: "Andrew Varvel", phoneNumber: "0400 123 456")
-    var secondContact = contactInfo(name: "John Smith", phoneNumber: "0411 123 456")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         listOfContacts.append(firstContact)
         listOfContacts.append(secondContact)
     }
+    
+    
+    
+    //Passing details to detail VC
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        
+        if segue.identifier == "ToDetail" {
+            
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            let theSelectedRow = listOfContacts[indexPath.row]
+            let theDestination = (segue.destinationViewController as ContactDetails)
+            
+            
+            theDestination.contactName = theSelectedRow.name
+            theDestination.contactPhone = theSelectedRow.phoneNumber
+        }
+    }
+
+    
+    
     
 
 }
