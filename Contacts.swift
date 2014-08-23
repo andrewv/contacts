@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Contacts: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class Contacts: UITableViewController, dataUpdated {
     
     struct contactInfo {
         var name: String
@@ -59,9 +59,22 @@ class Contacts: UITableViewController, UITableViewDataSource, UITableViewDelegat
             
             theDestination.contactName = theSelectedRow.name
             theDestination.contactPhone = theSelectedRow.phoneNumber
+        } else if segue.identifier == "ToInput"
+        {
+            (segue.destinationViewController as ContactInput).delegate = self
+
+            
         }
     }
 
+    //Delegate method to update the array with new contact
+    func didUpdateContact(senderClass: AnyObject, aName: String, aPhoneNumber: String) {
+        
+        var newContact = contactInfo(name: aName, phoneNumber: aPhoneNumber)
+        listOfContacts.append(newContact)
+        
+        self.tableView.reloadData()
+    }
     
     
     

@@ -15,6 +15,7 @@
 		2A4F190819A87E530098DC08 /* png;base642b0a26dbae9e61af.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A4F190719A87E530098DC08 /* png;base642b0a26dbae9e61af.png */; };
 		2A4F193D19A88C310098DC08 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F193C19A88C310098DC08 /* Contacts.swift */; };
 		2A4F194319A89D4B0098DC08 /* ContactDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F194219A89D4B0098DC08 /* ContactDetails.swift */; };
+		2A4F194519A8A1C10098DC08 /* ContactInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4F194419A8A1C10098DC08 /* ContactInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		2A4F190719A87E530098DC08 /* png;base642b0a26dbae9e61af.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "png;base642b0a26dbae9e61af.png"; path = "../../../../../Downloads/png;base642b0a26dbae9e61af.png"; sourceTree = "<group>"; };
 		2A4F193C19A88C310098DC08 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = SOURCE_ROOT; };
 		2A4F194219A89D4B0098DC08 /* ContactDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetails.swift; sourceTree = "<group>"; };
+		2A4F194419A8A1C10098DC08 /* ContactInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				2A4F18EA19A87CD40098DC08 /* AppDelegate.swift */,
 				2A4F18EC19A87CD40098DC08 /* ViewController.swift */,
 				2A4F18EE19A87CD40098DC08 /* Main.storyboard */,
+				2A4F194419A8A1C10098DC08 /* ContactInput.swift */,
 				2A4F194219A89D4B0098DC08 /* ContactDetails.swift */,
 				2A4F190719A87E530098DC08 /* png;base642b0a26dbae9e61af.png */,
 				2A4F18F119A87CD40098DC08 /* Images.xcassets */,
@@ -220,6 +223,7 @@
 			files = (
 				2A4F18ED19A87CD40098DC08 /* ViewController.swift in Sources */,
 				2A4F194319A89D4B0098DC08 /* ContactDetails.swift in Sources */,
+				2A4F194519A8A1C10098DC08 /* ContactInput.swift in Sources */,
 				2A4F18EB19A87CD40098DC08 /* AppDelegate.swift in Sources */,
 				2A4F193D19A88C310098DC08 /* Contacts.swift in Sources */,
 			);
