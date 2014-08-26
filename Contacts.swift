@@ -28,6 +28,20 @@ class Contacts: UITableViewController, dataUpdated {
         return listOfContacts.count
     }
     
+    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if editingStyle == .Delete {
+            listOfContacts.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+    }
+    
+    override func tableView(tableView: UITableView!, moveRowAtIndexPath sourceIndexPath: NSIndexPath!, toIndexPath destinationIndexPath: NSIndexPath!) {
+        
+        let fromContact = listOfContacts[sourceIndexPath.row]
+        listOfContacts.removeAtIndex(sourceIndexPath.row)
+        listOfContacts.insert(fromContact, atIndex: destinationIndexPath.row)
+    }
+    
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("contact", forIndexPath: indexPath) as UITableViewCell
@@ -40,6 +54,9 @@ class Contacts: UITableViewController, dataUpdated {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Do any additional setup after loading the view, typically from a nib.
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         listOfContacts.append(firstContact)
         listOfContacts.append(secondContact)
