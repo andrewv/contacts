@@ -1,0 +1,10 @@
+PODS:
+  - HPReorderTableView (0.2)
+
+DEPENDENCIES:
+  - HPReorderTableView (~> 0.2)
+
+SPEC CHECKSUMS:
+  HPReorderTableView: 245322ad8ca898bffd5f121fd2385ea962ff2b4c
+
+COCOAPODS: 0.33.1

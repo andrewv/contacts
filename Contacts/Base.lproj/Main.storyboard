@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Ghn-cY-dYE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Cqy-X8-VgV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
@@ -159,10 +159,45 @@
             </objects>
             <point key="canvasLocation" x="1625" y="1055"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="Cw1-Ah-ptT">
+            <objects>
+                <tabBarController id="Cqy-X8-VgV" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Ij0-BK-dUe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ghn-cY-dYE" kind="relationship" relationship="viewControllers" id="ttd-X1-GGO"/>
+                        <segue destination="tfk-Nh-qTk" kind="relationship" relationship="viewControllers" id="ggg-dJ-mPa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UzD-15-uAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176" y="1072"/>
+        </scene>
+        <!--Green Page-->
+        <scene sceneID="GE6-Cb-Hfu">
+            <objects>
+                <viewController title="Green Page" id="tfk-Nh-qTk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uqc-0t-6PW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.65041252760000001" green="1" blue="0.46734536189999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="z8K-Ko-yHd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb5-Fy-8ei" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="614" y="414"/>
+        </scene>
+        <!--Contacts-->
         <scene sceneID="JuZ-Nr-eox">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ghn-cY-dYE" sceneMemberID="viewController">
+                <navigationController title="Contacts" automaticallyAdjustsScrollViewInsets="NO" id="Ghn-cY-dYE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="ZWh-r4-LAL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iz3-nI-jMe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
